@@ -1,0 +1,13 @@
+%******************************************************
+% PROGRAM TO SIMULATE THE TDOA APPROACH FOR CALIBRATION
+%******************************************************
+
+% FUNCTION TO GENERATE A CURVE
+% straight line
+x= 1:100;
+for i=1:100
+    y(i)= 3*x(i)+2;
+end
+plot(x,y)
+
+%generate a parabola
