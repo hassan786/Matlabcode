@@ -3,7 +3,7 @@ switch t
     case 1
         disp('curve seleted is a straight line')
         m=1:0.5:20;
-        n=2*m+3;
+        n=0.4*m+5;
         plot(m,n)
     case 2
         disp('curve seleted is a sinusoidal curve')
