@@ -1,6 +1,9 @@
+%********************************************************************
+%CALIBRATION OF SENSORS USING TDOA APPRAOCH FOR SIMULATED DATA
+%********************************************************************
 disp('Select the type of curve to be Simulated for the Calibration')
 disp('1= straight line, 2=sinusoidal curve, 3=spline')
-choice= input('Enter the choice:')
+choice= input('Enter the choice:') %Enter the choice of cureve to be simulated for calibrating the sensors
 [x y]= curve(choice) % The x ad y co-ordinates give the tag positions as a mathematical function
 Sm=[0 0];   % Position of the master sensor
 S1=[0 20];   %Assumed position of the sensor to be calibrated
