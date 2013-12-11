@@ -5,7 +5,7 @@
 function f= timediff(r01,xt,yt,S,v)
 %function calculating distence vector 'r'  for each of the slave sensor
 r = sqrt((xt-S(1,1)).^2+(yt-S(1,2)).^2); % get real distance from emitter for each and one of the stations
-rd=abs(r-r01);
+rd=r01-r;
 f= rd/v;
 end
 

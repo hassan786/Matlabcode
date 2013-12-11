@@ -11,7 +11,7 @@ switch t                                        %switch Switch among several cas
         title('Straight Line')
          xlabel('X');
         ylabel('Y=f(X)');
-        legend('Original signal','Signal with AWGN');
+        %legend('Original signal',h 'Signal witAWGN');
    
     case 2                                      %second case generates sinusoidal curve
         disp('curve seleted is a sinusoidal curve')
