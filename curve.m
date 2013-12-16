@@ -25,17 +25,7 @@ switch t                                        %switch Switch among several cas
         xlabel('X');
         ylabel('Y=f(X)');
         legend('Original signal','Signal with AWGN');
-    case 3                                      %third case generates spline
-        disp('curve seleted is a spline')
-        m=0:0.2:7;
-        n=sin(m)+0.5*m;                         %equation of spline
-        %y = awgn(n,20,'measured');              % Add white Gaussian noise.
-
-        plot(m,n)                           %plot spline
-        title('Spline')
-        legend('Original signal','Signal with AWGN');
-         xlabel('X');
-        ylabel('Y=f(X)');
+   
     otherwise
         disp('Curve selection does not exist')   
 end

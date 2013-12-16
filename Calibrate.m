@@ -1,7 +1,7 @@
 clear all;
 clc;
 disp('Select the type of curve to be Simulated for the Calibration') 
-disp('1= straight line, 2=sinusoidal curve, 3=spline')
+disp('1= straight line, 2=sinusoidal curve')
 choice= input('Enter the choice:')  %Enter the choice of cureve to be simulated for calibrating the sensors
 
 [xt,yt]= curve(choice);             % The x and y co-ordinates give the tag positions as a mathematical function
@@ -20,6 +20,9 @@ td3= timediff(r0,xt,yt,S3,v); %time difference form each of the target positions
 lb=[0,0];  % lower bound 
 ub=[7,7]; %upper bound 
 
-Sc1=lsqnonlin(@(Sc1)SCalibrate(Sc1,r0,xt,yt,td1,v),[0,1],lb,ub) % least square non-linear optamization function call
-Sc2=lsqnonlin(@(Sc2)SCalibrate(Sc2,r0,xt,yt,td2,v),[0,1],lb,ub) % least square non-linear optamization function call
-Sc3=lsqnonlin(@(Sc3)SCalibrate(Sc3,r0,xt,yt,td3,v),[1,1],lb,ub) % least square non-linear optamization function call
+Sc1=lsqnonlin(@(Sc1)SCalibrate(Sc1,r0,xt,yt,td1,v),[0,1],lb,ub); % least square non-linear optamization function call
+Sc2=lsqnonlin(@(Sc2)SCalibrate(Sc2,r0,xt,yt,td2,v),[0,1],lb,ub); % least square non-linear optamization function call
+Sc3=lsqnonlin(@(Sc3)SCalibrate(Sc3,r0,xt,yt,td3,v),[1,1],lb,ub); % least square non-linear optamization function call
+Sc1
+Sc2
+Sc3
