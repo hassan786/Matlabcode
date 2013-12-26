@@ -3,27 +3,27 @@ switch t                                        %switch Switch among several cas
     
     case 1                                      %first case generates straight line 
         disp('curve seleted is a straight line')
-        m=0:0.5:6;
-        n=0.4*m;                              %equation of straight line
-        %y = awgn(n,20,'measured');     1
+        m=0:0.3:7;
+        n=m;                              %equation of straight line
         plot(m,n)                           %plot straight line
         title('Straight Line')
          xlabel('X');
         ylabel('Y=f(X)');
-        %legend('Original signal',h 'Signal witAWGN');
    
     case 2                                      %second case generates sinusoidal curve
         disp('curve seleted is a sinusoidal curve')
         m=0:0.2:7;
-        n=5*sin(m);                             %equation of sinusoidal function
-        %y = awgn(n,10,'measured');              % Add white Gaussian noise.
-
+        n=3*sin(m)+4;                             %equation of sinusoidal function
         plot(m,n)                           %plot sinusoidal
         title('Plot of sin')
        
         xlabel('X');
         ylabel('Y=f(X)');
-        legend('Original signal','Signal with AWGN');
+        
+    case 3
+       m=0:0.2:6;
+       n=(sqrt(3^2-(m-3).^2))+3.5;
+       plot(m,n)
    
     otherwise
         disp('Curve selection does not exist')   
