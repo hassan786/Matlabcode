@@ -23,6 +23,6 @@ for i=1:ns-1
 end
 disp('Enter the initial point for the optimization algorithm.')
 x0=input('Enter the initial point row wise for each slave sensor')
-Sc=lsqnonlin(@(Sc)SCalibrate1(Sc,r0,xt,yt,td,v),(x0)) 
+Sc=lsqnonlin(@(Sc)SCalibrate1(Sc,r0,xt,yt,td,v,ns),(x0)) 
     % least square non-linear optamization function call
     % The initial guess of 1,0 for the third sensor gives accurate results
