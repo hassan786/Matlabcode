@@ -53,8 +53,8 @@ switch t                                        %switch Switch among several cas
         
         plot(A(:,1), A(:,2), 'clipping', 'off')
         
-        m=A(:,1);
-        n=A(:,2);
+        m=A(:,1)';
+        n=A(:,2)';
         
     otherwise
         disp('Curve selection does not exist')
