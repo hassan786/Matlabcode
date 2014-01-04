@@ -7,7 +7,6 @@ function y= timediff(r0,xt,yt,Sl,v)
 r = sqrt((xt-Sl(1)).^2+(yt-Sl(2)).^2); % get real distance from emitter for each and one of the stations
 rd=r0-r;
 t= rd/v;
-y = awgn(t,10,'measured');
 end
 
     

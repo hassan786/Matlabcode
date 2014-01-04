@@ -3,7 +3,7 @@ switch t                                        %switch Switch among several cas
     
     case 1                                      %first case generates straight line
         disp('curve seleted is a straight line')
-        m=0:0.3:7;
+        m=0:0.3:6;
         n=m;                              %equation of straight line
         plot(m,n)                           %plot straight line
         title('Straight Line')
